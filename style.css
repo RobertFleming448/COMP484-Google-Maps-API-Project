@@ -1,0 +1,165 @@
+/*
+Google Fonts:
+
+font-family: 'Bree Serif', serif;
+
+font-family: 'Nerko One', cursive;
+
+font-family: 'Satisfy', cursive;
+
+font-family: 'Ubuntu Condensed', sans-serif;
+*/
+h1{
+  font-family: 'Bree Serif', serif;
+}
+h2{
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+html{
+  background-image: url("csunbg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  user-select: none; /*used to prevent user from cheating stops user selections*/
+}
+.rightText h2
+{
+  color: green;
+  font-family: 'Satisfy', cursive;
+}
+.wrongText h2
+{
+  color: red;
+  font-family: 'Nerko One', cursive;
+}
+.timer
+{
+  font-family: 'Bree Serif', serif;
+  font-size: 150%;
+}
+.button
+{
+    text-align: center;
+    padding:10px;
+    color: red;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 2%;
+    display: inline-block;
+}
+#changeMap
+{
+  width: 20%;
+}
+#startTimer{
+  width: 15%;
+}
+.button:hover
+{
+    color: darkred;
+    background-color: gray;
+}
+#cover{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#map {
+  height: 90%;
+  width: 40%;
+  border-radius: 50px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#questionWrap
+{
+  height: 78%;
+  margin:4%;
+  float: left;
+  width: 50%;
+  background-color: white;
+  padding: 1%;
+  border-radius: 20px;
+}
+#pond {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  position: absolute;
+  top: 80%;
+  left: 82%;
+}
+#oviatt {
+  height: 90px;
+  width: 90px;
+  border-radius: 10px;
+  position: absolute;
+  top: 58%;
+  left: 73.3%;
+}
+#plaza {
+  height: 75px;
+  width: 94px;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 80.5%;
+}
+#gallery {
+  height: 100px;
+  width: 80px;
+  border-radius: 10px;
+  position: absolute;
+  top: 36%;
+  left: 72%;
+}
+#glenn {
+  height: 100px;
+  width: 75px;
+  border-radius: 10px;
+  position: absolute;
+  top: 36%;
+  left: 64%;
+}
+
+#results {
+  font-size: 120%;
+  text-align: center;
+  background: #fc9c8b;
+  max-width: 20%;
+  max-height: 30%;
+  padding: 2%;
+  position: absolute;
+  top: 37%;
+  left: 20%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
+#results p {
+  font-family: 'Bree Serif', serif;
+}
+.correct {
+  background-color: green;
+  opacity: 0.5;
+}
+
+.incorrect {
+  background-color: red;
+  opacity: 0.5;
+}
+#start.invisible, .invisible {
+  color: white;
+  background-color: white;
+  opacity: 0;
+}
+/*Fill window with map even if not full*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
