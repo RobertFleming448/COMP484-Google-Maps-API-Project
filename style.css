@@ -115,13 +115,13 @@ html{
   top: 36%;
   left: 64%;
 }
-#prof {
+#gallery {
   height: 100px;
-  width: 100px;
+  width: 80px;
   border-radius: 10px;
   position: absolute;
-  top: 20%;
-  left: 80%;
+  top: 36%;
+  left: 72%;
 }
 #results {
   font-size: 120%;

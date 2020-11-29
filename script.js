@@ -1,31 +1,31 @@
-const oviatt = document.querySelector("#oviatt");
-const plaza = document.querySelector("#plaza");
-const prof = document.querySelector("#prof");
-const pond = document.querySelector("#pond");
-const glenn = document.querySelector("#glenn");
+window.onload = function() {
+  //alert("loaded");
+  let oviatt = document.querySelector("#oviatt");
+  let plaza = document.querySelector("#plaza");
+  let gallery = document.querySelector("#gallery");
+  let pond = document.querySelector("#pond");
+  let glenn = document.querySelector("#glenn");
+  let cover = document.querySelector("#cover");     //covers the map so the user cant see which items are selectable
+  let begin = document.querySelector("#start");     //start button
+  let change = document.querySelector("#changeMap");
 
-const cover = document.querySelector("#cover");     //covers the map so the user cant see which items are selectable
-const begin = document.querySelector("#start");     //start button
-
-const change = document.querySelector("#changeMap");
+  oviatt.addEventListener("dblclick", oviattCheck); //listen for double click on oviatt
+  plaza.addEventListener("dblclick", plazaCheck); //listen for double click on plaza
+  gallery.addEventListener("dblclick", galleryCheck); //listen for double click on gallery
+  pond.addEventListener("dblclick", pondCheck); //listen for double click on pond
+  glenn.addEventListener("dblclick", glennCheck); //listen for double click on glenn
+  cover.addEventListener("dblclick", wrong);  //listen for double click on everything except answers
+  begin.addEventListener("click", startGame); //listen for click on start button start the game
+  begin.addEventListener("click", startTimer);  //listen for click on start button start the timer
+  change.addEventListener("click", swapMap); //listen for click on start button start the game
+};
 
 var questionNum=0;  //tracks current question status
 var correct=0;  //counts how many user has gotten correct
 
 //dbclick event from https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
 
-oviatt.addEventListener("dblclick", oviattCheck); //listen for double click on oviatt
-plaza.addEventListener("dblclick", plazaCheck); //listen for double click on plaza
-prof.addEventListener("dblclick", profCheck); //listen for double click on prof
-pond.addEventListener("dblclick", pondCheck); //listen for double click on pond
-glenn.addEventListener("dblclick", glennCheck); //listen for double click on glenn
 
-cover.addEventListener("dblclick", wrong);  //listen for double click on everything except answers
-begin.addEventListener("click", startGame); //listen for click on start button start the game
-
-begin.addEventListener("click", startTimer);  //listen for click on start button start the timer
-
-change.addEventListener("click", swapMap); //listen for click on start button start the game
 
 function oviattCheck()  //runs if oviatt library is pressed, if not the current quesiton being asked answer is incorrect go to incorrect function; if is correct go to correct function
 {
@@ -59,7 +59,7 @@ function plazaCheck() //runs if plaza del sol is pressed, if not the current que
   }
 }
 
-function profCheck()  //runs if prof is pressed, if not the current quesiton being asked answer is incorrect go to incorrect function; if is correct go to correct function
+function galleryCheck()  //runs if gallery is pressed, if not the current quesiton being asked answer is incorrect go to incorrect function; if is correct go to correct function
 {
   if(running===false) //prevent clicking if game is not actively running
   {
@@ -172,7 +172,7 @@ function right()  //if answer is correct this function runs, prints the correct 
     break;
 
     case 3:   //add correct style to map selector and problem status
-    document.getElementById("prof").classList.add('correct');
+    document.getElementById("gallery").classList.add('correct');
     document.getElementById("result3").innerHTML="<h2>You Know Your Stuff!</h2>";
     document.getElementById("result3").classList.add('rightText');
     revealNextQ();
@@ -221,7 +221,7 @@ function wrong()  //if answer is incorrect this function runs, prints the incorr
     break;
 
     case 3:   //add incorrect style to map selector and problem status
-    document.getElementById("prof").classList.add('incorrect');
+    document.getElementById("gallery").classList.add('incorrect');
     document.getElementById("result3").innerHTML="<h2>WRONG!</h2>";
     document.getElementById("result3").classList.add('wrongText');
     revealNextQ();
