@@ -107,14 +107,6 @@ html{
   top: 60%;
   left: 80.5%;
 }
-#glenn {
-  height: 100px;
-  width: 75px;
-  border-radius: 10px;
-  position: absolute;
-  top: 36%;
-  left: 64%;
-}
 #gallery {
   height: 100px;
   width: 80px;
@@ -123,6 +115,15 @@ html{
   top: 36%;
   left: 72%;
 }
+#glenn {
+  height: 100px;
+  width: 75px;
+  border-radius: 10px;
+  position: absolute;
+  top: 36%;
+  left: 64%;
+}
+
 #results {
   font-size: 120%;
   text-align: center;
